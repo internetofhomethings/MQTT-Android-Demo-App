@@ -9,4 +9,4 @@ Setup:<br>
 <br>
 This project includes a pre-built apk file that is ready to be installed on an Android device.
 
-The APK file is located at <app folder>/MQTTDemo/app/build/outputs/apk/debug
+The APK file is located at /MQTTDemo/app-debug.apk
