@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px" >
+        <requestFocus />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/msg"
+        android:layout_width="374dp"
+        android:layout_height="520dp"
+        android:ems="10"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        >
+
+        <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="374dp"
+            android:layout_height="520dp"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            >
+
+            <TextView
+                android:id="@+id/subscribedMsg"
+                android:layout_width="374dp"
+                android:layout_height="520dp"
+                android:gravity="bottom"
+                android:layout_weight="1.0"
+                />
+        </ScrollView>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:stretchColumns="0,1"
+        android:background="@android:color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:background="#000000">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_margin="1dp"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:text="Connect Status"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cnxStatus"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_column="1"
+            android:layout_margin="1dp"
+            android:layout_centerVertical="true"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:hint="Connect status"
+            android:textStyle="normal" />
+
+    </TableRow>
+
+    <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Mqtt Broker"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/urlBroker"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="tcp://iot.eclipse.org:1883"
+                android:textStyle="normal" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Mqtt Client UN"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/clientUn"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Enter User Name"
+                android:text=""
+                android:textStyle="normal" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Mqtt Client PW"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/clientPw"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Enter Password"
+                android:text=""
+                android:textStyle="normal" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Subscribe Topic "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/subTopic"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Enter Topic"
+                android:textStyle="normal" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Publish Topic "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pubTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Enter Topic"
+                android:textStyle="normal" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#000000">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:text="Publish Message "
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/pubMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical"
+                android:hint="Enter Message"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:textStyle="normal" />
+        </TableRow>
+
+    </TableLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
